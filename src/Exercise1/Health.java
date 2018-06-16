@@ -7,6 +7,18 @@ private String healthType;
         super (typeOfInsurance, monthlyCost);
 
     }
+
+
+    public String getHealthType() {
+        return healthType;
+    }
+
+    public void setHealthType(String healthType) {
+        if(healthType==""){
+            throw new IllegalArgumentException("Please give the health insurance type");
+        }
+        this.healthType = healthType;
+    }
     @Override
     public double setInsuranceCost() {
         if(healthType.toLowerCase()=="Dental"){
@@ -24,14 +36,5 @@ private String healthType;
         else
             return 0;
     }
-
-    public String getHealthType() {
-        return healthType;
-    }
-
-    public void setHealthType(String healthType) {
-        this.healthType = healthType;
-    }
-
     public String displayInfo(){return String.format("%s %s%n%s %s", "Health Insurance: ", super.toString(), "Insurance for: ",healthType);}
 }

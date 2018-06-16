@@ -1,6 +1,6 @@
 package Exercise1;
 
-public abstract class Insurance {
+public abstract class Insurance{
     private final String insuranceType;
     private Double monthlyCost;
 
@@ -9,7 +9,7 @@ public abstract class Insurance {
         this.monthlyCost = monthlyCost;
 
         // Check if gross sales is 0.0 or higher
-        if (monthlyCost < 0.0 || monthlyCost > 500) {
+        if (monthlyCost < 0.0 || monthlyCost > 50000) {
             throw new IllegalArgumentException("Monthly cost must be greater than $0.00 and less than $500.00");
         }
     }
