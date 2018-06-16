@@ -5,10 +5,10 @@ public class Life extends Insurance{
 private double age;
 private double insuranceRate;
 
-    public Life(String typeOfInsurance, double monthlyCost, double age) {
+    public Life(String typeOfInsurance, double monthlyCost, double age, double insuranceRate) {
      super(typeOfInsurance, monthlyCost);
      //checking
-        if(age < 0.0 || age!=100) {
+        if(age < 0.0 || age<100) {
             throw new IllegalArgumentException("Age limit for insurance is 0-100 years.");
         }
 
