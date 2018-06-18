@@ -30,7 +30,7 @@ public class PersonalMortgage extends Mortgage {
     }
     @Override
 public String getMortgageInfo(){
-        return (bankName+ "This is the personal mortgage where you can get mortgage amount for your personal need..\n");
+        return (bankName+ "\nThis is the personal mortgage where you can get mortgage amount for your personal need..\n");
 }
     @Override
     public String toString() {

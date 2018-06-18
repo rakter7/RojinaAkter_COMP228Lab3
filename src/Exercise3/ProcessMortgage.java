@@ -1,4 +1,5 @@
 package Exercise3;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ProcessMortgage {
@@ -16,10 +17,13 @@ public class ProcessMortgage {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter the prime rate: ");
-        double interest = Double.parseDouble(input.nextLine());
-        personalMortgage.setInterest(interest);
-        for (int i=0;i<mortgages.length;i++) {
+        System.out.println("Please enter the mortgage type: Personal Mortgage - 1 or Business Mortgage - 2: ");
+        int choice = Integer.parseInt(input.nextLine());
+
+        if (choice == 1) {
+            System.out.println("Please enter the prime rate: ");
+            double interest = Double.parseDouble(input.nextLine());
+            personalMortgage.setInterest(interest);
 
             System.out.println("Please enter the Term: ");
             double mortgageTerm;
@@ -39,9 +43,12 @@ public class ProcessMortgage {
             double mortgageFee;
             mortgageFee = Double.parseDouble(input.nextLine());
             personalMortgage.setMortgageFee(mortgageFee);
-
-
+        }
+        if (choice == 2) {
             //Business Mortgage
+            System.out.println("Please enter the prime rate: ");
+            double interest1 = Double.parseDouble(input.nextLine());
+            businessMortgage.setInterest(interest1);
 
             System.out.println("Please enter the Term: ");
             double mortgageTerm1;
@@ -60,9 +67,7 @@ public class ProcessMortgage {
             businessMortgage.setBusinessInsurance(mortgageInsurance);
 
             System.out.println();
-            System.out.println();
         }
-
 
         System.out.println();
         for (Mortgage currentMortgage : mortgages)
@@ -72,5 +77,4 @@ public class ProcessMortgage {
             System.out.println();
         }
     }
-
 }

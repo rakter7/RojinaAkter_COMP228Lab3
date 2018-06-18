@@ -1,5 +1,7 @@
 package Exercise3;
 
+import java.util.Random;
+
 public abstract class Mortgage implements MortgageConstants{
     //variables
     public int mortgageNum;
@@ -29,6 +31,11 @@ public abstract class Mortgage implements MortgageConstants{
     }
 
     //getter and setter
+
+    public void setMortgageNum(int mortgageNum) {
+        this.mortgageNum = mortgageNum;
+    }
+
     public final int getMortgageNum() {
         return mortgageNum;
     }
@@ -70,7 +77,6 @@ public abstract class Mortgage implements MortgageConstants{
         this.term = term;
     }
 
-
     //abstract method
     public abstract double mortgageInstallment() ;
 
@@ -83,9 +89,5 @@ public abstract class Mortgage implements MortgageConstants{
         return String.format("%s%s %n%s%s %n%s$%.2f %n%s$%.2f %n%s%s","Mortage Number: " , mortgageNum , "Customer Name: " , customerName,
                 "Mortgage Amount: ", mortgageAmount, "Prime Rate: ", interest, "Term: ", term);
     }
-
-
-
-
 }
 
