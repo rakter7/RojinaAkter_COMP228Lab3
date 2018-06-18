@@ -4,7 +4,7 @@ public class FullTimeStudent extends Student {
     private final double tuitionFee=2000;
 
     public FullTimeStudent(String studentName, boolean studentStatus, double tuitionFee) {
-        super(studentName, studentStatus=true);
+        super(studentName, studentStatus);
     }
 
     @Override

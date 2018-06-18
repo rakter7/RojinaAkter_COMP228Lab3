@@ -4,7 +4,7 @@ public class PartTimeStudent extends Student{
     private double creditHour;
 
    public PartTimeStudent(String studentName, boolean studentStatus, double creditHour) {
-        super(studentName, studentStatus=false);
+        super(studentName, studentStatus);
         this.creditHour=creditHour;
     }
 
@@ -26,6 +26,6 @@ public class PartTimeStudent extends Student{
     }
     @Override
     public String toString() {
-        return String.format("Part Time Student: %n%s%n%s%.2f", super.toString(),"Total credit Hour: ", getCreditHour());
+        return String.format("%nPart Time Student: %n%s%n%s%.2f", super.toString(),"Total credit Hour: ", getCreditHour());
     }
 }

@@ -3,6 +3,7 @@ package Exercise2;
 public abstract class Student {
     private String studentName;
     private boolean studentStatus;
+    private String studentType;
 
     public Student(String studentName, boolean studentStatus){
         this.studentName= studentName;
@@ -21,6 +22,16 @@ public abstract class Student {
     }
 
     public boolean isStudentStatus() {
+        if(studentType.equals("true"))
+        {
+            System.out.println("Full Time Student");
+            return studentStatus;
+        }
+        if(studentType.equals("false"))
+        {
+            System.out.println("Part Time Student");
+            return studentStatus;
+        }
         return studentStatus;
     }
     public abstract double tuitionFee();
