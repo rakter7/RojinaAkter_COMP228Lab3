@@ -19,7 +19,7 @@ public class ProcessMortgage {
         System.out.println("Please enter the prime rate: ");
         double interest = Double.parseDouble(input.nextLine());
         personalMortgage.setInterest(interest);
-        for (Mortgage mortgage : mortgages) {
+        for (int i=0;i<mortgages.length;i++) {
 
             System.out.println("Please enter the Term: ");
             double mortgageTerm;
@@ -52,13 +52,15 @@ public class ProcessMortgage {
             mortgageAmount1 = Double.parseDouble(input.nextLine());
             businessMortgage.setMortgageAmount(mortgageAmount1);
             System.out.println("Customer Name: ");
-            String customerName1 = input.next();
+            String customerName1 = input.nextLine();
             businessMortgage.setCustomerName(customerName1);
             System.out.println("Mortgage Insurance: ");
             double mortgageInsurance;
             mortgageInsurance = Double.parseDouble(input.nextLine());
             businessMortgage.setBusinessInsurance(mortgageInsurance);
 
+            System.out.println();
+            System.out.println();
         }
 
 

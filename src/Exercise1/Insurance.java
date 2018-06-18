@@ -9,8 +9,8 @@ public abstract class Insurance{
         this.monthlyCost = monthlyCost;
 
         // Check if gross sales is 0.0 or higher
-        if (monthlyCost < 0.0 || monthlyCost > 50000) {
-            throw new IllegalArgumentException("Monthly cost must be greater than $0.00 and less than $500.00");
+        if (monthlyCost < 0.0 || monthlyCost > 5000) {
+            throw new IllegalArgumentException("Monthly cost must be greater than $0.00 and less than $5000.00");
         }
     }
 
@@ -23,8 +23,8 @@ public abstract class Insurance{
     }
 
     public void setMonthlyCost(double monthlyCost) {
-        if (monthlyCost < 0.0 || monthlyCost > 500) {
-            throw new IllegalArgumentException("Monthly cost must be greater than $0.00 and less than $500.00");
+        if (monthlyCost < 0.0 || monthlyCost > 5000) {
+            throw new IllegalArgumentException("Monthly cost must be greater than $0.00 and less than $5000.00");
         }
         this.monthlyCost = monthlyCost;
     }
@@ -35,7 +35,7 @@ public abstract class Insurance{
 
     @Override
     public String toString() {
-        return String.format("%s: %s %n%s %.2f",
+        return String.format("%s: %s %n%s $%.2f",
                 "Insurance Type: ", insuranceType,
                 "Monthly Cost: ", monthlyCost);
 

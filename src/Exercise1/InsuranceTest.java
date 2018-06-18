@@ -3,18 +3,22 @@ package Exercise1;
 public class InsuranceTest {
     public static void main(String[] args) {
 
-        //Health health = new Health("Health Insurance 1", 100, "Dental");
-        //Insurance client1= health;
-        //client1.setInsuranceCost();
+        Life life = new Life("Life", 200, 45);
+        Health health = new Health("Health", 300, "Dental");
 
-        //System.out.printf("%s",client1);
+        Insurance[] insurances = new Insurance[2];
 
-        Life life = new Life("LIFE INSURANCE", 5000, 38);
-        Insurance client2 = life;
-        client2.setInsuranceCost();
+        insurances[0] = life;
+        insurances[1] = health;
 
         System.out.println();
+        for (Insurance currentInsurance : insurances)
 
-        System.out.printf("%s", client2.displayInfo());
+        {
+            System.out.println();
+            System.out.println(currentInsurance);
+            System.out.printf("Insurance premium: $%.2f%n", currentInsurance.setInsuranceCost());
+
         }
+    }
 }
